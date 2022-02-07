@@ -1,5 +1,4 @@
-from RSA.usecase.createKeys import CreateKeys
-from RSA.usecase.generateKeysFromPublic import GenerateKeysFromPublic
+from RSA import CreateKeys, GenerateKeysFromPublic, PreSetPrimes
 
 from qiskit.aqua.algorithms import Shor
 from qiskit.aqua import QuantumInstance
@@ -8,7 +7,8 @@ from qiskit import QuantumCircuit, Aer, execute
 from qiskit.tools.visualization import plot_histogram
 
 msg = 9
-keys = CreateKeys.execute(1,30)
+# keys = CreateKeys.execute(1,30)
+keys = PreSetPrimes.execute(3, 7)
 print(keys.d)
 
 
