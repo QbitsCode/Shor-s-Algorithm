@@ -3,7 +3,7 @@
 #pip install miller-rabin
 from RSA import CreateKeys, GenerateKeysFromPublic
 
-
+#this code is deprecated
 keys = CreateKeys.execute(1, 30)
 print("N: ", keys.n)
 print("E: ", keys.e)

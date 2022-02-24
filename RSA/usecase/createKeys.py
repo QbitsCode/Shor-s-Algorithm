@@ -1,3 +1,5 @@
+from RSA.entity.private import Private
+from RSA.entity.public import Public
 from RSA.entity.crypto import Crypto
 from miller_rabin import miller_rabin
 import random
@@ -70,4 +72,5 @@ class CreateKeys:
         e = getE(t)
         d = getD(e, t)
 
-        return Crypto(n, e, d)
+        #return Crypto(n, e, d)
+        return Public(n, e), Private(n, d)
